@@ -23,12 +23,14 @@ public class DetachKeyBinding extends FabricKeyBinding {
 		MinecraftClient client = MinecraftClient.getInstance();
 		CameraOverriddenEntity cameraOverriddenEntity = (CameraOverriddenEntity) client.player;
 
-		if (!this.wasPressed() && cameraOverriddenEntity != null) {
+		if (cameraOverriddenEntity != null) {
 			if (Main.CONFIG.toggleDetachment) {
-				if (detached) {
-					this.onReattach(client, cameraOverriddenEntity);
-				} else {
-					this.onDetach(client, cameraOverriddenEntity);
+				if (this.wasPressed()) {
+					if (detached) {
+						this.onReattach(client, cameraOverriddenEntity);
+					} else {
+						this.onDetach(client, cameraOverriddenEntity);
+					}
 				}
 			} else if (pressed) {
 				this.onDetach(client, cameraOverriddenEntity);
