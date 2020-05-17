@@ -15,6 +15,13 @@ repositories {
 		name = "Fabric"
 		url = "https://maven.fabricmc.net/"
 	}
+	maven {
+		name = "CottonMC"
+		url = "https://server.bbkr.space/artifactory/libs-snapshot"
+	}
+	maven {
+		url = "https://dl.bintray.com/shedaniel/autoconfig1u/"
+	}
 	jcenter()
 }
 
@@ -26,6 +33,15 @@ dependencies {
 
 	// Fabric API
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${project.fabric_version}")
+
+	// Configuration
+	modCompile("me.shedaniel.cloth:config-2:${project.clothconfig_version}")
+	include("me.shedaniel.cloth:config-2:${project.clothconfig_version}")
+
+	modImplementation("me.sargunvohra.mcmods:autoconfig1u:${project.autoconfig_version}")
+	include("me.sargunvohra.mcmods:autoconfig1u:${project.autoconfig_version}")
+
+	modImplementation("io.github.prospector:modmenu:${project.modmenu_version}")
 }
 
 processResources {

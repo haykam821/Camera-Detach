@@ -1,3 +1,7 @@
 {
-	"key.cameradetach.detach": "Detach"
+	"key.cameradetach.detach": "Detach",
+	"text.autoconfig.cameradetach.option.resetCamera": "Reset Camera",
+	"text.autoconfig.cameradetach.option.resetCamera.@Tooltip[0]": "Whether to revert the camera back to",
+	"text.autoconfig.cameradetach.option.resetCamera.@Tooltip[1]": "its original position after reattaching it.",
+	"text.autoconfig.cameradetach.title": "Camera Detach Configuration"
 }
