@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "io.github.haykam821.cameradetach.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"client": [
+		"CameraMixin",
+		"EntityMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

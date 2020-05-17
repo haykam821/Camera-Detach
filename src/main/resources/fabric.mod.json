@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "cameradetach",
+	"version": "1.0.0",
+	"name": "Camera Detach",
+	"description": "Allow detaching the camera from the direction the player is looking in.",
+	"authors": [
+		"haykam821"
+	],
+	"contact": {
+		"homepage": "https://github.com/haykam821/Camera-Detach#readme",
+		"issues": "https://github.com/haykam821/Camera-Detach/issues"
+	},
+	"entrypoints": {
+		"client": [
+			"io.github.haykam821.cameradetach.Main"
+		]
+	},
+	"mixins": [
+		"cameradetach.mixin.json"
+	],
+	"license": "MIT",
+	"icon": "assets/cameradetach/icon.png",
+	"depends": {
+		"fabricloader": ">=0.4.0"
+	}
+}
