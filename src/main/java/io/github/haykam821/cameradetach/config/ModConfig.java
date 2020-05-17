@@ -9,4 +9,7 @@ import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry;
 public class ModConfig implements ConfigData {
 	@ConfigEntry.Gui.Tooltip(count = 2)
 	public boolean resetCamera = true;
+
+	@ConfigEntry.Gui.Tooltip
+	public boolean toggleDetachment = false;
 }

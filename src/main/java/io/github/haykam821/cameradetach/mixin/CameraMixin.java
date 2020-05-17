@@ -20,7 +20,7 @@ public abstract class CameraMixin {
 
 	@Inject(method = "update", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/Camera;setRotation(FF)V", shift = At.Shift.AFTER))
 	public void lockRotation(BlockView focusedBlock, Entity cameraEntity, boolean isThirdPerson, boolean isFrontFacing, float f, CallbackInfo ci) {
-		if (Main.DETACH.isPressed() && cameraEntity instanceof ClientPlayerEntity) {
+		if (Main.DETACH.isDetached() && cameraEntity instanceof ClientPlayerEntity) {
 			CameraOverriddenEntity cameraOverriddenEntity = (CameraOverriddenEntity) cameraEntity;
 			this.setRotation(cameraOverriddenEntity.getCameraYaw(), cameraOverriddenEntity.getCameraPitch());
 		}

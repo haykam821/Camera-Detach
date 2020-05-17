@@ -24,7 +24,7 @@ public class EntityMixin implements CameraOverriddenEntity {
 
 	@Inject(method = "changeLookDirection", at = @At("HEAD"), cancellable = true)
 	public void changeCameraLookDirection(double xDelta, double yDelta, CallbackInfo ci) {
-		if (!Main.DETACH.isPressed() || !((Object) this instanceof ClientPlayerEntity)) return;
+		if (!Main.DETACH.isDetached() || !((Object) this instanceof ClientPlayerEntity)) return;
 
 		double pitchDelta = (yDelta * 0.15);
 		double yawDelta = (xDelta * 0.15);
