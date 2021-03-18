@@ -2,10 +2,10 @@ package io.github.haykam821.cameradetach;
 
 import io.github.haykam821.cameradetach.config.ModConfig;
 import io.github.haykam821.cameradetach.keybinding.DetachKeyBinding;
-import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
-import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.keybinding.KeyBindingRegistry;
+import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.util.Identifier;
 
 public class Main implements ClientModInitializer {
@@ -18,6 +18,6 @@ public class Main implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-		KeyBindingRegistry.INSTANCE.register(DETACH);
+		KeyBindingHelper.registerKeyBinding(DETACH);
 	}
 }

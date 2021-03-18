@@ -4,14 +4,15 @@ import org.lwjgl.glfw.GLFW;
 
 import io.github.haykam821.cameradetach.CameraOverriddenEntity;
 import io.github.haykam821.cameradetach.Main;
-import net.fabricmc.fabric.api.client.keybinding.FabricKeyBinding;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.options.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
 
-public class DetachKeyBinding extends FabricKeyBinding {
+public class DetachKeyBinding extends KeyBinding {
 	public DetachKeyBinding(Identifier identifier) {
-		super(identifier, InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_LEFT_ALT, "key.categories.misc");
+		super(Util.createTranslationKey("key", identifier), InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_LEFT_ALT, "key.categories.misc");
 	}
 
 	private boolean detached = false;
